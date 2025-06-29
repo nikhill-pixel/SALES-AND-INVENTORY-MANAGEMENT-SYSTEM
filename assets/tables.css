@@ -1,0 +1,144 @@
+/* ../assets/tables.css - Gradient background, centered card design */
+
+body {
+    margin: 0;
+    padding: 40px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    min-height: 100vh;
+    box-sizing: border-box;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Headings */
+h2,
+h3,
+h4 {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Table container */
+table {
+    width: 100%;
+    max-width: 1000px;
+    border-collapse: separate;
+    border-spacing: 0;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    margin-top: 30px;
+    background-color: #ffffff;
+}
+
+/* Fix rounded corners */
+table tr:first-child td:first-child {
+    border-top-left-radius: 16px;
+}
+
+table tr:first-child td:last-child {
+    border-top-right-radius: 16px;
+}
+
+table tr:last-child td:first-child {
+    border-bottom-left-radius: 16px;
+}
+
+table tr:last-child td:last-child {
+    border-bottom-right-radius: 16px;
+}
+
+/* Table cells */
+table th,
+table td {
+    border: 1px solid #dee2e6;
+    padding: 14px 12px;
+    text-align: center;
+    font-size: 15px;
+    background-color: #ffffff;
+}
+
+table th {
+    background-color: #1e3c72;
+    color: white;
+    font-weight: 600;
+}
+
+table tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+table tr:hover {
+    background-color: #ffffff;
+}
+
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    display: inline-block;
+}
+
+label {
+    font-weight: 600;
+    margin-right: 10px;
+    color: #1e3c72;
+}
+
+input[type="date"],
+select,
+button {
+    padding: 10px 14px;
+    margin-right: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+}
+
+input:focus,
+select:focus {
+    border-color: #1e3c72;
+    outline: none;
+}
+
+button {
+    background-color: #1e3c72;
+    color: white;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #16335e;
+}
+
+a {
+    margin-top: 20px;
+    color: #ffffff;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 5px 0;
+    color: #ffffff;
+}
