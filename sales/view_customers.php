@@ -1,7 +1,7 @@
 <?php
 include '../includes/db.php';
 include '../includes/auth.php';
-checkAccess("Sales Manager");
+checkAccess("sales Manager");
 
 $customers = mysqli_query($conn, "SELECT * FROM customers");
 ?>
@@ -26,7 +26,7 @@ $customers = mysqli_query($conn, "SELECT * FROM customers");
     </tr>
     <?php while($row = mysqli_fetch_assoc($customers)) { ?>
         <tr>
-            <td><?= $row['customerId'] ?></td>
+            <td><?= $row['id'] ?></td>
             <td><?= htmlspecialchars($row['name']) ?></td>
             <td><?= htmlspecialchars($row['contactInfo']) ?></td>
             <td><?= htmlspecialchars($row['address']) ?></td>

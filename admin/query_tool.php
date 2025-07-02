@@ -1,7 +1,7 @@
 <?php
 include '../includes/db.php';
 include '../includes/auth.php';
-checkAccess("Admin");
+checkAccess("admin");
 
 $output = null;
 $error = null;

@@ -1,7 +1,7 @@
 <?php
 include '../includes/db.php';
 include '../includes/auth.php';
-checkAccess("Sales Manager");
+checkAccess("sales Manager");
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $name = $_POST["name"];

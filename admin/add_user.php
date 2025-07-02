@@ -1,11 +1,11 @@
 <?php
 include '../includes/db.php';
 include '../includes/auth.php';
-checkAccess("Admin");
+checkAccess("admin");
 
 // Handle form submission
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $name = mysqli_real_escape_string($conn, $_POST['name']);
+    $name = mysqli_real_escape_string($conn, $_POST['username']);
     $role = $_POST['role'];
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $contactInfo = mysqli_real_escape_string($conn, $_POST['contactInfo']);
@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $msg = "⚠️ Email already exists. Choose a different one.";
     } else {
         $insert = mysqli_query($conn, "
-            INSERT INTO users (name, role, email, contactInfo, password)
+            INSERT INTO users (username, role, email, contactInfo, password)
             VALUES ('$name', '$role', '$email', '$contactInfo', '$password')
         ");
         $msg = $insert ? "✅ New user created successfully!" : "❌ Error creating user.";
@@ -39,14 +39,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     <form method="POST">
         <label>Name:</label>
-        <input type="text" name="name" required>
+        <input type="text" name="username" required>
 
         <label>Role:</label>
         <select name="role" required>
             <option value="">--Select Role--</option>
-            <option value="Admin">Admin</option>
-            <option value="Sales Manager">Sales Manager</option>
-            <option value="Inventory Manager">Inventory Manager</option>
+            <option value="admin">Admin</option>
+            <option value="sales Manager">Sales Manager</option>
+            <option value="inventory Manager">Inventory Manager</option>
         </select>
 
         <label>Email:</label>

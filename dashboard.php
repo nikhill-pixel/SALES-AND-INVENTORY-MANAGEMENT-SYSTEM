@@ -18,18 +18,18 @@ $user = $_SESSION["user"];
 
 <div class="dashboard-container">
     <h2 class="welcome-msg">
-        Welcome, <?= htmlspecialchars($user["name"]) ?> 
+        Welcome, <?= htmlspecialchars($user["username"]) ?> 
         <span class="role-tag">(<?= htmlspecialchars($user["role"]) ?>)</span>
     </h2>
 
     <div class="card">
         <h3>Your Dashboard</h3>
         <ul class="link-list">
-            <?php if ($user["role"] === "Admin") { ?>
+            <?php if ($user["role"] === "admin") { ?>
                 <li><a href="admin/manage_users.php">👤 Manage Users</a></li>
                 <li><a href="admin/add_user.php">➕ Add Manager</a></li>
                 <li><a href="admin/query_tool.php">🔍 Query Database</a></li>
-            <?php } elseif ($user["role"] === "Sales Manager") { ?>
+            <?php } elseif ($user["role"] === "sales Manager") { ?>
                 <li><a href="sales/new_sale.php">📝 Create New Sale</a></li>
                 <li><a href="sales/sales_report.php">📊 Sales Reports</a></li>
                 <li><a href="sales/add_customer.php">➕ Add New Customer</a></li>
@@ -40,7 +40,7 @@ $user = $_SESSION["user"];
                 <li><a href="sales/view_delivery_partners.php">🚛 View Delivery Partners</a></li>
                 <li><a href="sales/change_price.php">💲 Change Product Price</a></li>
                 <li><a href="sales/profit_dashboard.php">💰 Profit Dashboard</a></li>
-            <?php } elseif ($user["role"] === "Inventory Manager") { ?>
+            <?php } elseif ($user["role"] === "inventory_manager") { ?>
                 <li><a href="inventory/stock_update.php">📦 Update Stock</a></li>
                 <li><a href="inventory/low_stock.php">⚠️ Low Stock Alerts</a></li>
                 <li><a href="inventory/add_product.php">➕ Add New Product</a></li>
